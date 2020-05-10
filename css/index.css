@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4{
+  color: #404040;
+}
+
+h1 {
+  padding-top: 90px;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  width: 90%;
+  margin: 10px auto 0px auto;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* TOP HEADER */
+
+#headerContainer{
+  position: relative;
+}
+
+#bgContainer{
+  width: 100%;
+  height: 180px;
+  background:  linear-gradient(90deg, rgba(250,139,67,1) 0%, rgba(239,52,84,1) 100%);
+  z-index: -1;
+  position: absolute;
+}
+
+#userMatchCount{
+  display: flex;
+  z-index: 3;
+  padding-top: 150px;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Ubuntu', sans-serif;
+  color: #404040;
+}
+
+#userMatchCount div{
+  width: 160px;
+  background-color: white;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 13px;
+  box-shadow: 7px 7px 7px -7px rgb(151, 151, 151);
+}
+
+.number{
+  font-size: 25px;
+  color: rgba(250,139,67,1);
+}
+
+#totalUsers{
+  margin-right: 10px;
+}
+
+#totalMatches{
+  margin-left: 10px;
+}
+
+/* GEVONDEN MATCHES */
+
+#matchesTitle{
+  font-family: 'Ubuntu', sans-serif;
+  display: block;
+  width: 90%;
+  margin: 60px auto 40px auto;
+  font-size: 20px;
+}
+
+#buddyProposalsContainer{
+  display: flex;
+  width: 100vw;
+  height: fit-content;
+  -webkit-overflow-scrolling: touch;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin: 0 auto;
+}
+
+/* #scroll{
+  overflow-x: auto;
+  width: 100%;
+} */
+
+.buddyProposals{
+  width: 50%;
+  flex-shrink: 0;
+  height: fit-content;
+  display: inline-block;
+  box-shadow: 6px 6px 5px -6px rgb(151, 151, 151);
+  border-radius: 13px;
+  flex: 0 0 auto;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+
+
+.buddyProposals:first-of-type{
+  margin-left: 20px;
+}
+
+.buddyProposals:last-of-type{
+  margin-right:  20px; /* werkt niet ?? */
+}
+
+
+
+.buddyProposals img{
+  width: 100%;
+  border-radius: 13px 13px 0px 0px;
+}
+
+
+#searchBuddiesContainer p{
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+}
+
+    /* SCROLLBAR OPMAAK  */
+
+/* width */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Track
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
+}
+ 
+Handle
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+
+}
+
+Handle on hover
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} */
+
+/* BUDDY's ZOEKEN */
+
+#searchBuddiesContainer{
+  width: 90%;
+  margin: 0 auto;
+}
+
+h2{
+  font-family: 'Ubuntu', sans-serif;
+  display: block;
+  margin: 50px auto 20px auto;
+  font-size: 20px;
+}
+
+#searchBuddiesContainer input{
+  border: none;
+  padding: 10px 0px 10px 10px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  background-color: rgb(243, 243, 243);
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 6px 6px 5px -6px rgb(151, 151, 151);
+}
+
+#searchBuddiesContainer button {
+  margin-left: 30px;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(239, 52, 84, 1);
+  border: 2px solid rgba(239, 52, 84, 1);
+  color: white;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+#searchBuddiesContainer:hover{
+  background-color: transparent;
+  color: black;
+}
+
+.buddyProposals h3, .buddyProposals h4{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#titlesFlex{
+  display: flex;
+  justify-content: space-between;
+  margin: 18px;
+}
+
+#interesses{
+  font-family: 'Open Sans', sans-serif;
+  margin: 18px;
+}
+
+#interessesTitle{
+  color: #A8A8A8;
+  font-weight: bold;
+}
+
+.interesse{
+  display: flex;
+}
+
+@media (min-width: 550px) {
+
+  .buddyProposals{
+    width: 35%;
+  }
+
+
+}
+
+@media (min-width: 800px){
+
+  #bgContainer h1{
+    text-align: left;
+    font-size: 2.2em;
+  }
+
+  #userMatchCount{
+    justify-content: flex-end;
+    margin-right: 100px;
+    padding-top: 130px;
+  }
+
+  #userMatchCount div{
+    width: 200px;
+    height: 100px;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  .buddyProposals{
+    width: 250px;
+  }
+
+}
+
+@media (min-width: 1400px) {
+
+  .buddyProposals{
+  }
+
+}

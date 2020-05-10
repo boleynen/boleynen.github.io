@@ -1,0 +1,241 @@
+/* hamburger menu */
+*{
+  box-sizing: border-box;
+}
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.hamburger.is-active:hover {
+  opacity: 0.7;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+
+/*  hamburger animation */
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+
+}
+
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* hamburger & nav styling */
+
+#nav-container {
+  display: flex;
+  width: 100%;
+  box-shadow: 0px 2px 18px grey;
+  background-color: white;
+  position: fixed;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+#nav-container img {
+  margin: 15px;
+  object-fit: cover;
+  width: 100px;
+}
+
+#menuLinks {
+  position: fixed;
+  display: block;
+  margin-top: 50px;
+  padding-top: 20px;
+  width: 100%;
+  transform: translateY(-250px);
+  background-color: white;
+  text-align: center;
+  padding-bottom: 5px;
+  background:
+    linear-gradient(to left,
+      rgba(250, 139, 67),
+      rgba(239, 52, 84, 1)) left bottom white no-repeat;
+  background-size: 100% 2px;
+  z-index: 3;
+}
+
+#menuLinks a, #webNav a{
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  color: black;
+  margin: 20px auto;
+  padding-left: 50px;
+}
+
+#menuLinks a:hover, #webNav a:hover{
+  color: rgba(239, 52, 84, 1);
+}
+
+#webNav{
+  display: none;
+}
+
+/* animation when opening mobile menu  */
+
+.slide-bottom {
+  animation: slide-bottom 0.7s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(-250px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+.slide-top {
+  animation: slide-top 0.7s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-250px);
+  }
+}
+
+.notificatie{
+  width: 6px;
+  height: 6px;
+  background-color:rgba(239, 52, 84, 1);
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.visible{
+  display: inline-block;
+}
+
+.not-visible{
+  display: none;
+}
+
+/* begin media queries */
+
+@media (min-width: 800px) {
+  #menuLinks {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+
+}
+
+@media (min-width: 800px) {
+
+  #webNav{
+    display: flex;
+    padding-right: 200px;
+
+  }
+  #nav-container{
+    padding-left: 100px;
+  }
+}
+

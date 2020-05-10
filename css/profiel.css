@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+}
+
+h1 {
+    
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(250, 139, 67);
+    width: 90%;
+    margin-left : 30px;
+    font-size: 30px;
+}
+
+#nameImg{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+section {
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 40px;
+}
+
+label {
+    display: block;
+}
+
+section div {
+    margin-top: 20px;
+}
+
+table{
+    width: 100%;
+    margin-top: 40px;
+}
+
+td{
+    padding: 10px;
+}
+
+.changeLabel {
+    text-decoration: none;
+    color: rgb(250, 139, 67);
+    margin-top: 8px;
+    font-size: 14px;
+}
+#changeAvatar{
+    text-align: center;
+    padding: 10px 20px;
+    background-color: none;
+    border-radius: 10px;
+    border: 2px solid #FA8B43;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.inputField {
+    border: none;
+    padding: 10px 0px 10px 10px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    background-color: rgb(243, 243, 243);
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 6px 6px 5px -6px rgb(151, 151, 151);
+    display: none;
+}
+div p{
+    font-weight: bold;
+}
+#oldAvatar img{
+    max-width: 100%;
+}
+#oldAvatar{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.showInput{
+    display: none;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+#changeProfileBtn, #send-request-btn {
+    margin: 30px 0;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(239, 52, 84, 1);
+    border: 2px solid rgba(239, 52, 84, 1);
+    color: white;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+#send-request-btn{
+    margin-top: 0;
+    
+}
+
+#request-form{
+    width: 100%;
+}
+
+#changeProfileBtn:hover{
+    background-color: transparent;
+    color: black;
+}
+
+#submitBtn {
+    margin: 40px 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FA8B43;
+    border: 2px solid #FA8B43;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+#submitBtn:hover{
+    background-color: transparent;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+
+@media (min-width: 800px) {
+
+    section{
+        width: 70%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    h1{
+        font-size: 30px;
+        width: 70%;
+    }
+    form{
+        margin: 0 auto;
+        width: 70%;
+    }
+    table{
+        width: 100%;
+        padding-bottom: 60px;
+    }
+
+
+}
+@media (min-width: 992px){
+
+    h1{
+        font-size: 45px;
+    }
+    #nameImg{
+        padding: 30px 0px;
+    }
+    #profieltekstStyle{
+        margin-bottom: 30px;
+    }
+    body{
+        background: rgb(250,139,67);
+        background: linear-gradient(90deg, rgba(250,139,67,1) 0%, rgba(239,52,84,1) 100%);
+    }
+    section{
+        background-color: white;
+        width: 70%;
+        padding: 0px 50px;
+    }
+    
+}
+@media (min-width: 1400px){
+    section{
+        width: 45%;
+    }
+}
