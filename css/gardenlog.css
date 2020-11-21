@@ -1,0 +1,403 @@
+*{
+    color: #444444;
+}
+.clearfix:after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.hide-img{
+    display: none;
+}
+
+.hide-mobile{
+    display: none;
+}
+.hide-title{
+    display:none;
+}
+nav{
+    width: 100%;
+    background-color: #444444;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+#nav-hamburger{
+    margin: 12px 30px 12px 15px;
+    
+}
+.menu-button{
+    width: 27px;
+    height: 2.5px;
+    margin: 6px 0px;    
+    background-color: white;
+    border-radius: 50px;
+    
+}
+#logo-top{
+    width: 22px;
+    margin: 12px 12px 12px 30px;
+}
+.hamburger-links li a{
+    color: white;
+    text-decoration: none;
+    font-family: open-sans, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    z-index: 2;
+    display: block;
+}
+
+.hamburger-links li a:hover{
+    transition: color 500ms ease;
+    color: #d0a32e;
+}
+
+.hamburger-links li{
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.hamburger-links{
+    text-align: center;
+    background-color: #444444;
+    height: 155px;
+    width: 100%;
+    border-top: 3px solid #3f3f3f;
+
+}
+.links-container{
+    position: fixed;
+    width: 100%;
+}
+
+header{
+    margin-top: 57px;
+    background-image: url(../assets/img/gardenlog/header.png);
+    background-position: -50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 542.74px;
+    text-align: center;
+}
+
+h1{
+    font-size: 50px;
+    color: white;
+    font-family: questa-grande, serif;
+    font-weight: 700;
+    text-align: center;
+    line-height: 60px;
+    text-shadow: 1px 1px #444444;
+    padding: 100px 20px 35px 20px;
+}
+
+header p{
+    color: white;
+    text-align: center;
+    margin: 0px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 10px;
+}
+
+p{
+    font-family: open-sans, sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+
+/* MAIN */
+
+h2{
+    font-family: questa-grande, serif;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 35px 0px;
+}
+h3{
+    font-family: open-sans, sans-serif;
+    text-align: left;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+main img{
+    width: 220px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+main article{
+    text-align: center;
+    margin: 0px 25px 40px 25px;
+    padding: 15px;
+    background-color: #f3f3f3;
+    box-shadow: 9px 9px 5px -9px rgba(68,68,68,0.6);
+}
+
+.mainTekst{
+    text-align: justify;
+    line-height: 20px;
+    hyphens: auto;
+    z-index: 1;
+}
+
+.waarom-section{
+    background-color: #f3f3f3;
+}
+.waarom-section p{
+    padding: 0px 25px 20px 25px;
+    text-align: justify;
+    line-height: 20px;
+    hyphens: auto;
+}
+.waarom-section h3{
+    margin: 0px 25px 15px 25px;
+}
+.bold p{
+    font-weight: 600;
+}
+footer img{
+    width: 190px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+footer{
+    padding-bottom: 40px;
+}
+footer a{
+    margin: 10px 0px 20px 10px;
+    display: block;
+}
+.prototype-section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.prototype-section video{
+    width: 100%;
+    margin: 0 auto;
+}
+#video-container{
+    margin: 0 auto;
+    width: 50%;
+    overflow:hidden;
+    background-color: white;
+    width: 230px;
+    border: 10px solid #f3f3f3; 
+
+}
+h4{
+    text-align: center;
+    font-family: open-sans;
+    font-size: 1.2em;
+    margin: 20px;
+}
+footer{
+    background-color: #f3f3f3;
+}
+
+@media screen and (min-width:600px) {
+    #link1, #link2, #link3{
+        font-size: 2.1em;
+        padding: 50px 0px 40px 0px;
+    }
+    .links-container{
+        display: none;
+    }
+    #nav-hamburger{
+        display: none;
+    }
+    .nav-links-web{
+        padding-right: 30px;
+        width: 100%;
+    }
+    .hide-title{
+        display: inline;
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        font-weight: 800;
+        text-align: left;
+        font-size: 1.3em;
+
+        color: white;
+    }
+    .nav-links-web li{
+        background-color: #444444;
+        color: white;
+        margin: 10px;
+        float: right;
+        padding-top: 7px;
+    }
+    .nav-links-web li a{
+        color: white;
+        text-decoration: none;
+        font-family: open-sans, sans-serif;
+        font-size: 0.9em;
+    }
+    .nav-links-web li a:hover{
+        transition: color 500ms ease;
+        color: #d0a32e;
+    }
+
+    header{
+        margin-top: 40px;
+        background-image: url(../assets/img/gardenlog/header.png);
+        background-position: -50px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 542.74px;
+        text-align: center;
+    }
+
+    main{
+        /* margin-bottom: 70px; */
+    }
+    .waarom-section{
+        padding-bottom: 70px;
+    }
+    header h1{
+        padding: 150px 90px 0px 90px;
+        line-height: 70px;
+    }
+    header p{
+        padding: 60px 150px;
+    }
+    main article{
+        margin: 0px 60px 70px 60px;
+    }
+    .waarom-section h2{
+        padding: 0px 60px;
+    }
+    .waarom-section p{
+        padding: 0px 60px;
+    }
+    footer{
+        top: 0;
+    }
+    .images-footer{
+        display: flex;
+        width: 30%;
+        padding-top: 40px;
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+    .waarom-section h3{
+        padding: 50px 0px 20px 60px;
+    }
+    
+  }
+
+  @media screen and (min-width:1000px) {
+    #logo-top{
+        margin-top: 0px;
+        margin-left: 100px;
+        width: 50px;
+
+    }
+    .logo-web{
+        
+        display: inline-block;
+    }
+    nav{
+        padding-top: 20px;
+        background-color: transparent;
+    }
+    .scrolled{
+        background-color: #444444;
+        transition: background-color 200ms linear;
+    }
+    .scrolled-logo{
+        width: 40px;
+    }
+    .nav-links-web li {
+        background-color: transparent;
+        
+    }
+    .nav-links-web{
+        margin-right: 100px;
+    }
+    header{
+        margin: 0;
+        height: 90vh;
+    }
+    header h1{
+        font-size: 85.37px;
+        padding: 200px 0px 0px 100px;
+        line-height: 100px;
+        width: 50%;
+        text-align: left;
+    }
+    header p{
+        text-align: left;
+        padding: 40px 0px 0px 100px;
+        margin: 0;
+    }
+   
+    main section{
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+    }
+    main section article{
+        height: 150px;
+        width: 400px;
+        margin-top: 135px;
+        padding: 30px;
+    }
+    .waarom-section p, .waarom-section h3{
+        margin: 0px 200px 0px 200px;
+    }
+    .waarom-section h3{
+        padding: 50px 0px 20px 60px;
+    }
+    .nav-links-web .link3{
+        background-color: white;
+        padding: 7px;
+        color: #444444;
+    }
+
+  }
+  @media screen and (min-width:1500px) {
+    #logo-top{
+        margin-left: 200px;
+    }
+    header h1{
+        padding: 200px 0px 0px 200px;
+    }
+    header p{
+        text-align: left;
+        padding: 40px 0px 0px 200px;
+        margin: 0;
+    }
+    .nav-links-web{
+        margin-right: 170px;
+    }
+    .hide-img{
+       display: block;
+       width: 400px;
+       float: right ;
+       margin: 40px 260px 40px 150px;
+    }
+    .gezondheid-artikel, .planeet-artikel{
+        width: 900px;
+    }
+    .gezondheid-artikel{
+        margin-top: 70px;
+    }
+    .planeet-artikel{
+        margin-top: 40px;
+    }
+    .waarom-section p, .waarom-section h3{
+        margin: 0px 200px 0px 200px;
+    }
+    
+  }

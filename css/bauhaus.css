@@ -1,0 +1,250 @@
+/*  
+achtergrond: #C9C3C7
+geel: #E0C787
+wit stoel: #E5E4E4
+blauw stoel/tekst: #1A1D39
+
+*/
+
+@font-face{
+    font-family: gillsansbold; 
+    src: url(../assets/projects/bauhaus/GillSans\ Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    width: 449px;
+    height: 620px;
+    background-color: #C9C3C7;
+    /* position: absolute; */
+    margin: 300px auto 0pc auto;
+    /* margin-top: 300px; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: color-background-anim 20s linear 5s infinite;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgb(29, 29, 29); */
+}
+
+/*   H1 TITEL    */
+
+h1 {
+    width: 60%;
+    margin: 4px 100px 0px 120px;
+    font-family: gillsansbold;
+    color: #1A1D39;
+    font-size: 3.5em;
+    /* animation: color-anim 0.5s ease forwards 3.5s; */
+}
+
+
+
+/*   STOEL    */
+
+#chair_svg {
+    width: 55%;
+    margin: 65px 0px 0px 110px;
+}
+
+#chair_svg #bovenstuk_zitvlak {
+    /* M  */
+    stroke-dasharray: 861.36px;
+    stroke-dashoffset: 861.36px;
+    animation: line-anim 5s ease forwards, color-anim 2s ease forwards 5s, color-chair-anim 20s linear 6s infinite;
+
+}
+
+#chair_svg #onderstuk_zitvlak {
+    /* A  */
+    stroke-dasharray: 1519.11px;
+    stroke-dashoffset: 1519.11px;
+    animation: line-anim 5s ease forwards, color-anim 2s ease forwards 5s, color-chair-anim 20s linear 6s infinite;
+
+}
+
+#chair_svg .schaduw {
+    animation: appear-anim 4s ease forwards 5s, color-shadow-anim 20s linear 5s infinite;
+
+}
+
+
+/*   LIJN    */
+
+#line_svg {
+    z-index: -1;
+    top: 34px;
+    right: 0;
+    position: absolute;
+    width: 92.2%;
+}
+#line_svg .cls-1b{
+    animation: color-line-anim 20s linear 5s infinite;
+
+}
+
+
+
+/*   TEXT    */
+#small-text,
+#big-text {
+    font-family: awanzaman, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#small-text {
+    font-size: 20px;
+    transform: rotate(270deg);
+    z-index: 10;
+    position: absolute;
+    top: 150px;
+    line-height: 20px;
+}
+
+#big-text {
+    font-size: 15px;
+    width: 280px;
+    text-align: justify;
+    hyphens: auto;
+    line-height: 15px;
+    left: 40px;
+    position: absolute;
+    top: 480px;
+}
+
+
+
+
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes color-anim {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: #1A1D39;
+    }
+}
+
+@keyframes appear-anim {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: #1a1d39;
+    }
+}
+
+@keyframes color-chair-anim {
+    0% {
+        fill: #1a1d39;
+        stroke: #1a1d39;
+    }
+
+    33% {
+        fill: #AF6F6D;
+        stroke: #AF6F6D;
+    }
+
+    75% {
+        fill: #6A4394;
+        stroke: #6A4394;
+    }
+
+    100% {
+        fill: #1a1d39;
+        stroke: #1a1d39;
+    }
+}
+
+@keyframes color-line-anim {
+    0% {
+        stroke: #e0c787;
+    }
+
+    33% {
+        stroke: #8EC894;
+    }
+
+    75% {
+        stroke: #DD5536;
+    }
+
+    100% {
+        stroke: #e0c787;
+    }
+}
+
+@keyframes color-background-anim {
+    0% {
+        background-color: #C9C3C7;
+    }
+
+    33% {
+        background-color: #879EDD;
+    }
+
+    75% {
+        background-color: #e0c787;
+    }
+
+    100% {
+        background-color: #C9C3C7;
+    }
+}
+
+/* @keyframes color-h1-anim{
+    0% {
+        fill: #1B1D36;
+        stroke: #1B1D36;
+    }
+
+    33% {
+        fill: #E5E4E4;
+        stroke: #E5E4E4;
+    }
+
+    75% {
+        fill: #1B1D36;
+        stroke: #1B1D36;
+    }
+
+    100% {
+        fill: #1B1D36;
+        stroke: #1B1D36;
+    }
+} */
+
+@keyframes color-shadow-anim{
+    0% {
+        fill: #0B0D15;
+    }
+
+    33% {
+        fill: #422928;
+    }
+
+    75% {
+        fill: #251A33;
+    }
+
+    100% {
+        fill: #1B1D36;
+    }
+}
